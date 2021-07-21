@@ -1,0 +1,8 @@
+string path = "Your file path";
+System.Diagnostics.Process process = new System.Diagnostics.Process(); // System process
+process.StartInfo.CreateNoWindow = false; // no window mode
+process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;//
+process.StartInfo.UseShellExecute = true; // using ShellExecute
+process.StartInfo.FileName = path; // The file need to be printed
+process.StartInfo.Verb = "print"; // execute a print command on the file
+process.Start(); // Start Process
